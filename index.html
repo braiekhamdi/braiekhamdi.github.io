@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ── SEO REDIRECT TAGS ── -->
+    <!-- 1. Instantly redirects the user to the new site -->
+    <meta http-equiv="refresh" content="0; url=https://hamdi.braiek.com/">
+    
+    <!-- 2. Tells search engines this page has permanently moved to the new URL -->
+    <link rel="canonical" href="https://hamdi.braiek.com/" />
+    
+    <!-- 3. Prevents indexing of this placeholder page -->
+    <meta name="robots" content="noindex, follow" />
+    
+    <title>Hamdi Braiek — Website Moved</title>
+    <meta name="description" content="The personal academic website of Hamdi Braiek has moved to a new domain. You will be automatically redirected shortly.">
+
+    <!-- Structured Data to tell Google the site moved -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Hamdi Braiek - Applied Mathematics",
+      "url": "https://braiekhamdi.github.io/",
+      "publisher": {
+        "@type": "Person",
+        "name": "Hamdi Braiek"
+      },
+      "potentialAction": {
+        "@type": "MoveAction",
+        "target": "https://hamdi.braiek.com/"
+      }
+    }
+    </script>
+
+    <style>
+        /* Matching your website's visual identity */
+        :root {
+            --navy: #0D1F3C;
+            --navy2: #16294A;
+            --gold: #C9A84C;
+            --golddp: #A3822F;
+            --cream: #F7F4EE;
+            --white: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--navy);
+            color: var(--cream);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .redirect-container {
+            max-width: 500px;
+            padding: 2.5rem;
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
+            border: 1px solid rgba(201,168,76,0.2);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(201, 168, 76, 0.2);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #a9b3cc;
+            margin-bottom: 2rem;
+        }
+
+        .new-domain {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .new-domain:hover {
+            color: var(--golddp);
+            text-decoration: underline;
+        }
+
+        .redirect-btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--navy);
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(201, 168, 76, 0.2);
+        }
+
+        .redirect-btn:hover {
+            background-color: var(--golddp);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(201, 168, 76, 0.25);
+        }
+        
+        /* Fallback JS redirect script */
+        <script>
+            window.location.href = "https://hamdi.braiek.com/";
+        </script>
+    </style>
+</head>
+<body>
+
+    <div class="redirect-container">
+        <div class="spinner"></div>
+        <h1>Website Moved</h1>
+        <p>
+            This page has permanently moved to a new domain. You should be redirected automatically in a moment.
+        </p>
+        <p>
+            If you are not redirected within 5 seconds, please click the button below to visit my new academic website:
+        </p>
+        <br>
+        <a href="https://hamdi.braiek.com/" class="redirect-btn">
+            Go to New Website
+        </a>
+        <br><br>
+        <p style="font-size: 0.85rem; color: #8A8D99;">
+            New URL: <a href="https://hamdi.braiek.com/" class="new-domain">https://hamdi.braiek.com</a>
+        </p>
+    </div>
+
+    <!-- Fallback JavaScript redirect (in case meta-refresh is blocked) -->
+    <script>
+        setTimeout(function() {
+            window.location.replace("https://hamdi.braiek.com/");
+        }, 100);
+    </script>
+
+</body>
+</html>
