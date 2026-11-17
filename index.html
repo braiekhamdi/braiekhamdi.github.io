@@ -3,167 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- ── SEO REDIRECT TAGS ── -->
-    <!-- 1. Instantly redirects the user to the new site -->
-    <meta http-equiv="refresh" content="0; url=https://hamdi.braiek.com/">
-    
-    <!-- 2. Tells search engines this page has permanently moved to the new URL -->
-    <link rel="canonical" href="https://hamdi.braiek.com/" />
-    
-    <!-- 3. Prevents indexing of this placeholder page -->
-    <meta name="robots" content="noindex, follow" />
-    
-    <title>Hamdi Braiek — Website Moved</title>
-    <meta name="description" content="The personal academic website of Hamdi Braiek has moved to a new domain. You will be automatically redirected shortly.">
 
-    <!-- Structured Data to tell Google the site moved -->
+    <!-- Academic personal page in the classic GitHub Pages academic-template style
+         (minimal academic site / academicpages family): sticky white masthead,
+         left sidebar with round avatar and contact links, single main column,
+         sans-serif, thin hairline rules, flat design.
+         Indexable by Bing: robots = index, follow, canonical = this URL,
+         no meta-refresh and no JavaScript redirect of any kind.
+         The visitor chooses: "continue there now" (a plain link) or
+         "stay on this page" (the notice then says thanks). -->
+
+    <title>Hamdi Braiek — Applied Mathematician (formerly Hamdi Houichet)</title>
+    <meta name="description" content="Dr. Hamdi Braiek (formerly Hamdi Houichet) — Associate Professor in Applied Mathematics at ESPRIT, Tunis, Tunisia, and researcher at LAMSIN. Variational methods, image restoration, fractional-order models, optimization and physics-informed machine learning. Official website: hamdi.braiek.com.">
+    <meta name="keywords" content="Hamdi Braiek, Hamdi Houichet, Applied Mathematics, Image Restoration, Variational Methods, Total Variation, Fractional-Order Models, Variable Exponent, Optimization, Numerical Methods, Inverse Problems, Noise Removal, Speckle Noise, Cauchy Noise, Machine Learning, Physics-Informed Neural Networks, ESPRIT, LAMSIN, Tunisia">
+    <meta name="author" content="Hamdi Braiek">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://braiekhamdi.github.io/">
+
+    <!-- Bing Webmaster Tools verification:
+         After adding this site in Bing Webmaster Tools, paste the meta tag they
+         give you right here, commit, then click "Verify". Example:
+         <meta name="msvalidate.01" content="PASTE-YOUR-BING-CODE-HERE" />
+         (Same idea for Google Search Console: google-site-verification.) -->
+
+    <link rel="icon" type="image/png" href="https://hamdi.braiek.com/favicon/favicon.png">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Hamdi Braiek — Applied Mathematician (formerly Hamdi Houichet)">
+    <meta property="og:description" content="Associate Professor in Applied Mathematics at ESPRIT, researcher at LAMSIN. Variational methods, image restoration, fractional-order models, optimization and physics-informed machine learning.">
+    <meta property="og:url" content="https://braiekhamdi.github.io/">
+    <meta property="og:locale" content="en_US">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Hamdi Braiek - Applied Mathematics",
+      "@type": "Person",
+      "@id": "https://braiekhamdi.github.io/#person",
+      "name": "Hamdi Braiek",
+      "alternateName": "Hamdi Houichet",
+      "givenName": "Hamdi",
+      "familyName": "Braiek",
       "url": "https://braiekhamdi.github.io/",
-      "publisher": {
-        "@type": "Person",
-        "name": "Hamdi Braiek"
-      },
-      "potentialAction": {
-        "@type": "MoveAction",
-        "target": "https://hamdi.braiek.com/"
-      }
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://braiekhamdi.github.io/" },
+      "image": "https://hamdi.braiek.com/photos/personal/photo_cv.png",
+      "jobTitle": "Associate Professor in Applied Mathematics",
+      "description": "Applied mathematics researcher specializing in variational methods, image restoration, fractional-order models, optimization algorithms and numerical methods for inverse problems. Formerly published under the name Hamdi Houichet.",
+      "email": "mailto:hamdi.albraiek@gmail.com",
+      "worksFor": [
+        { "@type": "Organization", "name": "ESPRIT — École Supérieure Privée d'Ingénierie et de Technologies", "url": "https://www.esprit.tn/" },
+        { "@type": "Organization", "name": "LAMSIN Laboratory", "url": "https://www.lamsin.tn/" }
+      ],
+      "alumniOf": { "@type": "EducationalOrganization", "name": "University of Tunis El Manar" },
+      "sameAs": [
+        "https://hamdi.braiek.com/",
+        "https://orcid.org/0000-0002-3301-1385",
+        "https://github.com/braiekhamdi/",
+        "https://www.researchgate.net/profile/Hamdi-Braiek",
+        "https://www.linkedin.com/in/hamdi-braiek/",
+        "https://scholar.google.com/citations?user=VQhx_2MAAAAJ&hl=en"
+      ],
+      "knowsAbout": [
+        "Applied Mathematics", "Variational Methods", "Image Restoration",
+        "Total Variation Regularization", "Fractional-Order Models", "Variable-Exponent Models",
+        "Optimization Algorithms", "Numerical Methods", "Inverse Problems", "Noise Removal",
+        "Machine Learning", "Physics-Informed Neural Networks", "Scientific Computing"
+      ],
+      "knowsLanguage": ["Arabic", "French", "English"]
     }
     </script>
 
     <style>
-        /* Matching your website's visual identity */
-        :root {
-            --navy: #0D1F3C;
-            --navy2: #16294A;
-            --gold: #C9A84C;
-            --golddp: #A3822F;
-            --cream: #F7F4EE;
-            --white: #FFFFFF;
-        }
-
+        /* ── Academic-template family look: system sans-serif, white page,
+              thin hairline rules, flat, left sidebar + main column ── */
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--navy);
-            color: var(--cream);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
+            font-family: -apple-system, ".SFNSText-Regular", "San Francisco", Roboto,
+                         "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            color: #494E52;
+            background: #FFFFFF;
         }
 
-        .redirect-container {
-            max-width: 500px;
-            padding: 2.5rem;
-            background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
-            border: 1px solid rgba(201,168,76,0.2);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        a { color: #52A8C9; text-decoration: none; }
+        a:hover { color: #2C3E50; text-decoration: underline; }
+
+        /* Masthead */
+        .masthead {
+            position: sticky; top: 0; z-index: 20;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .masthead-inner {
+            max-width: 1024px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0.8rem 1rem; flex-wrap: wrap;
+        }
+        .site-title { font-weight: 700; font-size: 0.95rem; color: #2C3E50; }
+        .site-title:hover { color: #2C3E50; text-decoration: none; }
+        .masthead nav a {
+            margin-left: 1.25rem; font-size: 0.85rem; color: #494E52;
+        }
+        .masthead nav a:hover { color: #2C3E50; }
+
+        /* Layout: sidebar + main */
+        .wrapper {
+            max-width: 1024px; margin: 0 auto;
+            padding: 2rem 1rem 2.5rem;
+            display: grid;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 48px;
         }
 
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(201, 168, 76, 0.2);
-            border-top-color: var(--gold);
-            border-radius: 50%;
-            margin: 0 auto 2rem;
-            animation: spin 1s linear infinite;
+        /* Sidebar */
+        .sidebar { font-size: 0.85rem; }
+        .avatar {
+            width: 140px; height: 140px; border-radius: 50%;
+            display: block; margin: 0 auto 0.8rem;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 0 0 1px #E5E5E5;
+            object-fit: cover; object-position: center top;
+            background: #F2F3F3;
         }
+        .sb-name { text-align: center; font-size: 1.05rem; font-weight: 700; color: #2C3E50; margin: 0 0 0.15rem; }
+        .sb-role { text-align: center; color: #7A8288; margin: 0 0 0.2rem; }
+        .sb-former { text-align: center; color: #7A8288; font-size: 0.75rem; margin: 0 0 0.4rem; }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        .sb-label {
+            font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;
+            color: #7A8288; font-weight: 700;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 4px; margin: 1.3rem 0 0.6rem;
         }
+        .sb-list { list-style: none; margin: 0; padding: 0; }
+        .sb-list li { margin-bottom: 0.55rem; display: flex; align-items: flex-start; gap: 8px; }
+        .sb-list svg { width: 14px; height: 14px; flex: none; margin-top: 3px; fill: #7A8288; }
+        .sb-list a { color: #494E52; }
+        .sb-list a:hover { color: #52A8C9; text-decoration: underline; }
 
-        h1 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 2rem;
-            color: var(--white);
-            margin-bottom: 1rem;
+        .cv-btn {
+            display: block; width: 100%; text-align: center;
+            margin-top: 1.2rem; padding: 0.55rem 0.5rem;
+            font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+            color: #2C3E50; background: #FFFFFF;
+            border: 1px solid #CFD6D9; border-radius: 3px;
         }
+        .cv-btn:hover { background: #2C3E50; color: #FFFFFF; text-decoration: none; }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #a9b3cc;
-            margin-bottom: 2rem;
+        /* Main column */
+        .content h2 {
+            font-size: 1.35rem; font-weight: 700; color: #2C3E50;
+            border-bottom: 1px solid #F2F3F3;
+            padding: 10px 0;
+            margin: 1.9rem 0 0.8rem;
         }
+        .content h2:first-of-type { margin-top: 0.4rem; }
+        .content p { margin: 0 0 1rem; }
+        .content ul { margin: 0 0 1rem 1.2rem; padding: 0; }
+        .content li { margin-bottom: 0.6rem; }
+        .yr { font-weight: 700; color: #2C3E50; margin-right: 0.4rem; }
+        .name-note { font-style: italic; }
 
-        .new-domain {
-            color: var(--gold);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.2s;
+        /* Moved notice — plain small note, manual choice, never auto-redirect */
+        .notice {
+            background: #F4F8FA;
+            border-left: 4px solid #52A8C9;
+            padding: 0.7rem 1rem;
+            font-size: 0.9rem;
+            margin: 0 0 1.6rem;
         }
+        .notice a { text-decoration: underline; }
 
-        .new-domain:hover {
-            color: var(--golddp);
-            text-decoration: underline;
+        /* The "stay" control looks like a plain text link, nothing more */
+        .linkbtn {
+            background: none; border: none; padding: 0; margin: 0;
+            font: inherit; color: #52A8C9; text-decoration: underline; cursor: pointer;
         }
+        .linkbtn:hover { color: #2C3E50; }
 
-        .redirect-btn {
-            display: inline-block;
-            background-color: var(--gold);
-            color: var(--navy);
-            padding: 0.9rem 2rem;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(201, 168, 76, 0.2);
+        /* Footer */
+        footer {
+            border-top: 1px solid #E5E5E5;
+            background: #F7F7F7;
+            font-size: 0.75rem;
+            color: #7A8288;
+            padding: 1.1rem 1rem;
+            line-height: 1.7;
         }
+        .footer-inner { max-width: 1024px; margin: 0 auto; }
+        footer p { margin: 0 0 0.3rem; }
+        footer a { color: #52A8C9; }
 
-        .redirect-btn:hover {
-            background-color: var(--golddp);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 7px 14px rgba(201, 168, 76, 0.25);
+        @media (max-width: 820px) {
+            .wrapper { grid-template-columns: 1fr; gap: 1.5rem; }
+            .masthead nav a { margin-left: 0; margin-right: 1rem; }
         }
-        
-        /* Fallback JS redirect script */
-        <script>
-            window.location.href = "https://hamdi.braiek.com/";
-        </script>
     </style>
 </head>
 <body>
 
-    <div class="redirect-container">
-        <div class="spinner"></div>
-        <h1>Website Moved</h1>
-        <p>
-            This page has permanently moved to a new domain. You should be redirected automatically in a moment.
-        </p>
-        <p>
-            If you are not redirected within 5 seconds, please click the button below to visit my new academic website:
-        </p>
-        <br>
-        <a href="https://hamdi.braiek.com/" class="redirect-btn">
-            Go to New Website
-        </a>
-        <br><br>
-        <p style="font-size: 0.85rem; color: #8A8D99;">
-            New URL: <a href="https://hamdi.braiek.com/" class="new-domain">https://hamdi.braiek.com</a>·<br>
-            Powered by <a href="https://braiek.com" target="_blank" rel="noopener noreferrer">BRAIEK.com</a>.
-        </p>
+    <!-- ═══ Masthead ═══ -->
+    <div class="masthead">
+        <div class="masthead-inner">
+            <a class="site-title" href="https://braiekhamdi.github.io/">Hamdi Braiek</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </div>
 
-    <!-- Fallback JavaScript redirect (in case meta-refresh is blocked) -->
-    <script>
-        setTimeout(function() {
-            window.location.replace("https://hamdi.braiek.com/");
-        }, 100);
-    </script>
+    <!-- ═══ Sidebar + main content ═══ -->
+    <div class="wrapper">
 
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img class="avatar" src="https://hamdi.braiek.com/photos/personal/photo_cv.png"
+                 alt="Dr. Hamdi Braiek" onerror="this.style.display='none'">
+            <p class="sb-name">Hamdi Braiek</p>
+            <p class="sb-role">Associate Professor of Applied Mathematics</p>
+            <p class="sb-former">formerly Hamdi Houichet</p>
+
+            <div class="sb-label">Affiliations</div>
+            <ul class="sb-list">
+                <li><svg viewBox="0 0 16 16"><path d="M2 4h12v9H2z M2 4l6 5 6-5" fill="none" stroke="#7A8288" stroke-width="1.3"/></svg>
+                    <a href="https://www.esprit.tn/" target="_blank" rel="noopener">ESPRIT School of Engineering, 1–2 rue André Ampère, 2083 El Ghazala, Tunisia</a></li>
+                <li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="#7A8288" stroke-width="1.3"/><path d="M1.5 8h13M8 1.5c2.5 2.2 2.5 8.8 0 11M8 1.5c-2.5 2.2-2.5 8.8 0 11" fill="none" stroke="#7A8288" stroke-width="1.3"/></svg>
+                    <a href="https://www.lamsin.tn/" target="_blank" rel="noopener">Laboratory for Mathematical and Numerical Modeling in Engineering Science, National Engineering School of Tunis, B.P. 37, Belvédère, 1002, Tunis, Tunisia</a></li>
+            </ul>
+
+            <div class="sb-label">Contact</div>
+            <ul class="sb-list">
+                <li><svg viewBox="0 0 16 16">Email: <path d="M2 4h12v9H2z M2 4l6 5 6-5" fill="none" stroke="#7A8288" stroke-width="1.3"/></svg>
+                    <a href="mailto:hamdi.albraiek@gmail.com">hamdi.albraiek@gmail.com</a></li>
+                <li><svg viewBox="0 0 16 16"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 2.8 4.5 8.5 4.5 8.5S12.5 8.8 12.5 6c0-2.5-2-4.5-4.5-4.5z" fill="none" stroke="#7A8288" stroke-width="1.3"/><circle cx="8" cy="6" r="1.6" fill="#7A8288"/></svg>
+                    <span>El Ghazala, Tunisia</span></li>
+                <li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="#7A8288" stroke-width="1.3"/><path d="M1.5 8h13M8 1.5c2.5 2.2 2.5 8.8 0 11M8 1.5c-2.5 2.2-2.5 8.8 0 11" fill="none" stroke="#7A8288" stroke-width="1.3"/></svg>
+                    <a href="https://hamdi.braiek.com/" rel="me">hamdi.braiek.com</a></li>
+            </ul>
+
+            <div class="sb-label">Profiles</div>
+            <ul class="sb-list">
+                <li><svg viewBox="0 0 16 16"><path d="M1 6.5L8 3l7 3.5L8 10 1 6.5zM3 8v3.5c0 1 2.2 2 5 2s5-1 5-2V8l-5 2.5L3 8z" /></svg>
+                    <a href="https://scholar.google.com/citations?user=VQhx_2MAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+                <li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.8" fill="none" stroke="#7A8288" stroke-width="1.3"/><text x="8" y="10.6" text-anchor="middle" font-size="6.5" font-family="Arial" fill="#7A8288">iD</text></svg>
+                    <a href="https://orcid.org/0000-0002-3301-1385" target="_blank" rel="noopener">ORCID</a></li>
+                <li><svg viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="2.5" fill="none" stroke="#7A8288" stroke-width="1.3"/><text x="8" y="11" text-anchor="middle" font-size="7" font-weight="bold" font-family="Arial" fill="#7A8288">in</text></svg>
+                    <a href="https://www.linkedin.com/in/hamdi-braiek/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.52-.01.9.48 1.02.68.57.96 1.52.68 1.9.52.06-.42.24-.68.42-.83-1.67-.19-3.42-.83-3.42-3.71 0-.82.29-1.49.77-2.01-.08-.2-.34-1 .08-2.08 0 0 .63-.2 2.06.77a7.1 7.1 0 0 1 1.86-.25c.63 0 1.26.08 1.86.25 1.43-.97 2.06-.77 2.06-.77.42 1.08.16 1.88.08 2.08.48.52.77 1.19.77 2.01 0 2.89-1.76 3.52-3.43 3.71.27.24.51.7.51 1.41 0 1.01-.01 1.83-.01 2.08 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                    <a href="https://github.com/braiekhamdi/" target="_blank" rel="noopener">GitHub</a></li>
+                <li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.8" fill="none" stroke="#7A8288" stroke-width="1.3"/><text x="8" y="10.6" text-anchor="middle" font-size="6" font-weight="bold" font-family="Arial" fill="#7A8288">RG</text></svg>
+                    <a href="https://www.researchgate.net/profile/Hamdi-Braiek" target="_blank" rel="noopener">ResearchGate</a></li>
+            </ul>
+
+            <a class="cv-btn" href="https://hamdi.braiek.com/cv/cv_en.pdf" target="_blank" rel="noopener">
+                &#8595; Download CV
+            </a>
+        </aside>
+
+        <!-- Main content -->
+        <main class="content">
+
+            <!-- Moved notice: plain text, manual choice only, never an automatic redirect -->
+            <p class="notice" id="notice">
+                <span id="notice-main">
+                    This page has moved to
+                    <a href="https://hamdi.braiek.com/">hamdi.braiek.com</a>,
+                    where the complete website now lives. You may
+                    <a id="continue-link" href="https://hamdi.braiek.com/">continue there now</a>,
+                    or <button type="button" class="linkbtn" id="stay-btn">stay on this page</button>.
+                </span>
+                <span id="thanks" hidden>
+                    Thanks for staying. Continue to
+                    <a href="https://hamdi.braiek.com/">hamdi.braiek.com</a>
+                    whenever you are ready.
+                </span>
+            </p>
+
+            <h2 id="about">About</h2>
+            <p class="name-note">
+                My name was officially changed from Hamdi Houichet to Hamdi Braiek following
+                a judicial request. Per the ruling of the Tribunal de Mahdia dated August 30, 2022
+                (case no. 33217/2), my legal name is now Hamdi Braiek. Publications prior to 2022
+                may appear under the name Houichet.
+            </p>
+
+            <p>
+                I am an Applied Mathematics researcher and Associate Professor at
+                <a href="https://www.esprit.tn/" target="_blank" rel="noopener">ESPRIT</a>
+                (École Supérieure Privée d'Ingénierie et de Technologies) in Tunis, Tunisia,
+                where I have been teaching and conducting research since 2020, and a researcher
+                at the <a href="https://www.lamsin.tn/" target="_blank" rel="noopener">LAMSIN
+                Laboratory</a>. I received my Ph.D. in Applied Mathematics from the National
+                Engineering School of Tunis (ENIT), University of Tunis El Manar, in 2019, with
+                a thesis on variational and numerical techniques for medical ultrasound image
+                analysis, prepared under the supervision of Prof. Maher Moakher and
+                Dr. Badreddine Rjaibi. Before joining ESPRIT I taught at ENIT, ENSTAB, ISBB
+                and ISAMM.
+            </p>
+            <p>
+                My research lies at the intersection of mathematical analysis, variational
+                methods, partial differential equations, optimization and scientific computing.
+                
+            </p>
+            <p>
+                More recently, my work has expanded toward machine learning and deep
+                learning, physics-informed neural networks, neural PDE solvers and Bayesian
+                optimization and their integration with mathematical modeling. The complete
+                website, including my full CV, the research map, all publications, talks and
+                the teaching portfolio, is at
+                <a href="https://hamdi.braiek.com/">hamdi.braiek.com</a>.
+            </p>
+
+            
+
+
+            <h2>Research interests</h2>
+            <ul>
+                <li>Variational methods and total variation regularization for image restoration</li>
+                <li>Noise removal and inverse problems: Gaussian, speckle, multiplicative and Cauchy noise, with applications to ultrasound imaging</li>
+                <li>Fractional-order and variable-exponent models; nonlinear diffusion</li>
+                <li>Optimization algorithms and numerical methods: primal-dual schemes, fixed-point iterations, convexity splitting, topological gradient</li>
+                <li>Physics-informed neural networks, neural PDE solvers, Bayesian optimization and machine learning</li>
+            </ul>
+
+            <h2 id="publications">Selected publications</h2>
+            <p>
+                The complete publication record is available on
+                the <a href="https://hamdi.braiek.com/">official website</a>.
+            </p>
+            <ul>
+                <li>
+                    <span class="yr">2026</span>
+                    H. Braiek. <em>A new weighted Caputo fractional-order total variation for
+                    Cauchy noise removal with Bayesian optimization</em>. <em>The Visual
+                    Computer</em>, 42(9):364, 2026.
+                    <a href="https://doi.org/10.1007/s00371-026-04524-9" target="_blank" rel="noopener">doi:10.1007/s00371-026-04524-9</a>
+                </li>
+                <li>
+                    <span class="yr">2025</span>
+                    H. Braiek. <em>Primal-Dual Method for Image Denoising with Variable Exponent
+                    Sobolev Spaces</em>. <em>Moroccan Journal of Pure and Applied Analysis</em>,
+                    11(2):117–133, 2025.
+                    <a href="https://doi.org/10.34874/PRSM.mjpaa-vol11iss2.5711" target="_blank" rel="noopener">doi:10.34874/PRSM.mjpaa-vol11iss2.5711</a>
+                </li>
+                <li>
+                    <span class="yr">2021</span>
+                    H. Houichet, A. Theljani, M. Moakher. <em>A nonlinear fourth-order PDE for
+                    image denoising in Sobolev spaces with variable exponents and its numerical
+                    algorithm</em>. <em>Computational and Applied Mathematics</em>, 40(70), 2021.
+                    <a href="https://doi.org/10.1007/s40314-021-01462-1" target="_blank" rel="noopener">doi:10.1007/s40314-021-01462-1</a>
+                </li>
+                <li>
+                    <span class="yr">2020</span>
+                    A. Theljani, H. Houichet, A. Mohamed. <em>An adaptive Cahn-Hilliard equation
+                    for enhanced edges in binary image inpainting</em>. <em>Journal of Algorithms
+                    &amp; Computational Technology</em>, 14:1–10, 2020.
+                    <a href="https://doi.org/10.1177/1748302620941430" target="_blank" rel="noopener">doi:10.1177/1748302620941430</a>
+                </li>
+                <li>
+                    <span class="yr">2019</span>
+                    H. Houichet, A. Theljani, M. Moakher, B. Rjaibi. <em>A nonstandard
+                    higher-order variational model for speckle-noise removal and thin-structures
+                    detection</em>. <em>Journal of Mathematical Study</em>, 52(4):394–424, 2019.
+                    <a href="https://doi.org/10.4208/jms.v52n4.19.03" target="_blank" rel="noopener">doi:10.4208/jms.v52n4.19.03</a>
+                </li>
+                <li>
+                    <span class="yr">2019</span>
+                    H. Houichet, M. Moakher, B. Rjaibi. <em>A topological sensitivity method to
+                    remove noise and detect edges in ultrasound images</em>. <em>New Trends in
+                    Mathematical Sciences</em>, 7(4):421–440, 2019.
+                    <a href="https://doi.org/10.20852/ntmsci.2019.383" target="_blank" rel="noopener">doi:10.20852/ntmsci.2019.383</a>
+                </li>
+            </ul>
+
+            <h2 id="teaching">Teaching</h2>
+            <p>
+                At ESPRIT I teach and develop courses in numerical analysis, scientific
+                computing, optimization, machine learning and big data, from first-year
+                engineering mathematics to graduate-level AI projects: Mathematics
+                Fundamentals 1–4, Mathematics for Engineers, Numerical Analysis, Scientific
+                Computing, Statistics, Estimation Techniques, Machine Learning, ML
+                Optimization, Deep Learning, and AI Project.
+            </p>
+            <p>
+                Since 2021 I have also supervised more than twenty final-year engineering
+                projects in data science, artificial intelligence, machine learning and
+                computer vision.
+            </p>
+
+            <h2 id="contact">Contact</h2>
+            <p>
+                Email: <a href="mailto:hamdi.albraiek@gmail.com">hamdi.albraiek@gmail.com</a><br>
+                Address: ESPRIT, 1–2 rue André Ampère, 2083 El Ghazala, Tunisia<br>
+                Official website: <a href="https://hamdi.braiek.com/" rel="me">hamdi.braiek.com</a>
+            </p>
+        </main>
+    </div>
+
+    <!-- ═══ Footer ═══ -->
+    <footer>
+        <div class="footer-inner">
+            <p>
+                This page is hosted on GitHub Pages at
+                <a href="https://braiekhamdi.github.io/">braiekhamdi.github.io</a>
+                and kept as a profile mirror of the official website
+                <a href="https://hamdi.braiek.com/">hamdi.braiek.com</a>.
+            </p>
+            <p>© 2026 Hamdi Braiek · Last updated: May 2026 · Powered by <a href="https://braiek.com/">BRAIEK.com</a></p>
+        </div>
+    </footer>
+
+    <!-- The only script on this page swaps the notice text. It never navigates,
+         never redirects, and the page works fully without JavaScript. -->
+    <script>
+    (function () {
+        'use strict';
+        var stayBtn = document.getElementById('stay-btn');
+        var main = document.getElementById('notice-main');
+        var thanks = document.getElementById('thanks');
+        if (stayBtn && main && thanks) {
+            stayBtn.addEventListener('click', function () {
+                main.hidden = true;
+                thanks.hidden = false;
+            });
+        }
+    }());
+    </script>
 </body>
 </html>
